@@ -3,6 +3,9 @@ This is a Chrome Extension for Baidu Web Hi, now it still have a lot of bugs.
 ### Bugs
 1. after a long time, Notifications will disapear.
 
+### Todo
+1. change Notification Page, so it can show html message.
+
 ### How to use it?
 
 1. Load the extension.
@@ -10,7 +13,6 @@ This is a Chrome Extension for Baidu Web Hi, now it still have a lot of bugs.
 3. If Developer mode has a + by it, click the + to add developer information to the page. The + changes to a -, and more buttons and information appear.
 4. Click the Load unpacked extension button. A file dialog appears.
 5. In the file dialog, navigate to your extension's folder and click OK.
-
 
 Thanks!
 
