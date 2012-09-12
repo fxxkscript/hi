@@ -1,6 +1,9 @@
 /*
 	Web Hi Desktop Notification
+
+	Todo: 修改桌面消息窗口，支持HTML。
 */
+//桌面通知
 function notify(icon, username, message) {	
 		var notification = webkitNotifications.createNotification(
 				icon,
@@ -12,26 +15,19 @@ function notify(icon, username, message) {
 			notification.close();
 		}, 5000);
 }
-
-function checkTitle() {
-	if(document.title !== "百度Hi网页版") {
-		notify("48.png", "ray", "hello");
-		document.title = "百度Hi网页版";
-	};
-}
-
+//是否打开桌面消息推送功能，在页面顶部增加开启按钮
 function checkNotification() {
-	var a = document.createElement("button");
-	a.title = "check";
-	a.innerHTML = "打开桌面通知功能";
-	a.style.position = "fixed";
-	a.style.left = "50%";
-	a.style.top = "0";
-	a.style.display = "block";
-	a.style.width = "150px";
-	a.style.zIndex = "1000";
+	var button = document.createElement("button");
+	button.title = "check";
+	button.innerHTML = "打开桌面通知功能";
+	button.style.position = "fixed";
+	button.style.left = "50%";
+	button.style.top = "0";
+	button.style.display = "block";
+	button.style.width = "150px";
+	button.style.zIndex = "1000";
 
-	a.addEventListener('click', function(event) {
+	button.addEventListener('click', function(event) {
 		if(window.webkitNotifications.checkPermission() == 0) {
 			alert("通知可用");
 		}
@@ -40,10 +36,10 @@ function checkNotification() {
 		}
 		return false;
 	}, false);
-	var b = document.getElementById('headArea');
-	b.getElementsByClassName('topLeftArea')[0].appendChild(a);
+	var headArea = document.getElementById('headArea');
+	headArea.getElementsByClassName('topLeftArea')[0].appendChild(button);
 }
-
+//聊天信息监听
 function notice() {
 	var insertedNodes = [], pos=0, len;
 	document.addEventListener("DOMNodeInserted", function(e) {
