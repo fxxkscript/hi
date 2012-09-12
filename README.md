@@ -1,6 +1,6 @@
 百度Web Hi桌面消息提醒
 
-这是一个Chrome插件, 利用HTML5 Desktop Notification等神奇的功能，还有一些Bug待修复
+这是一个Chrome插件, 利用HTML5 Desktop Notification等神奇的功能
 
 ### 如何使用
 1. 把代码Clone到本地目录
@@ -15,9 +15,6 @@
 以下是装逼英文版
 
 This is a Chrome Extension for Baidu Web Hi, now it still have a lot of bugs.
-
-### Bugs
-1. after a long time, Notifications will disapear.
 
 ### Todo
 1. change Notification Page, so it can show html message.
