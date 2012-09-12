@@ -14,13 +14,12 @@
 ---
 以下是装逼英文版
 
-This is a Chrome Extension for Baidu Web Hi, now it still have a lot of bugs.
+This is a Chrome Extension for Baidu Web Hi
 
 ### Todo
 1. change Notification Page, so it can show html message.
 
 ### How to use it?
-
 1. Load the extension.
 2. Bring up the extensions management page by clicking the wrench icon and choosing Tools > Extensions.
 3. If Developer mode has a + by it, click the + to add developer information to the page. The + changes to a -, and more buttons and information appear.
