@@ -45,12 +45,12 @@ function notice() {
 	document.addEventListener("DOMNodeInserted", function(e) {
 		if(e.target.className == 'messageBlock') {
 			insertedNodes.push(e.target);
-			console.log(1);
 		}
 	}, false);
 	function show() {
 		clearTimeout(time);
 		len=insertedNodes.length;
+		console.log(insertedNodes);
 		if(len > pos) {
 			for(var i = pos; i < len; i++) {
 				var ele = insertedNodes[i];
@@ -60,6 +60,10 @@ function notice() {
 			}
 			pos = len;
 		}
+		if(len > 10) {
+			insertedNodes = [];
+			pos = 0;
+		} 
 		time = setInterval(show, 1000);
 	}
 	var time = setInterval(show, 1000);
@@ -70,3 +74,4 @@ function init() {
 	notice();
 }
 init();
+
