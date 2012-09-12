@@ -44,8 +44,9 @@ function checkNotification() {
 //聊天信息监听
 function notice() {
 	var insertedNodes = [], pos=0, len;
+	var username = document.getElementById('webIMSelfInfo');
 	document.addEventListener("DOMNodeInserted", function(e) {
-		if(e.target.className == 'messageBlock') {
+		if( e.target.className === 'messageBlock' && e.target.firstChild.className !== "selfMessageTitle") {
 			insertedNodes.push(e.target);
 			show();
 		}
@@ -61,7 +62,8 @@ function notice() {
 			}
 			pos = len;
 		}
-		if(len > 10) {
+		//消息超过200条清空
+		if(len > 200) {
 			insertedNodes = [];
 			pos = 0;
 		} 
