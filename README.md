@@ -1,5 +1,8 @@
 This is a Chrome Extension for Baidu Web Hi, now it still have a lot of bugs.
 
+### Bugs
+1. after a long time, Notifications will disapear.
+
 ### How to use it?
 
 1. Load the extension.
@@ -8,3 +11,7 @@ This is a Chrome Extension for Baidu Web Hi, now it still have a lot of bugs.
 4. Click the Load unpacked extension button. A file dialog appears.
 5. In the file dialog, navigate to your extension's folder and click OK.
 
+
+Thanks!
+
+Ray
