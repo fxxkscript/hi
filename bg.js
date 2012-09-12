@@ -1,7 +1,9 @@
 /*
 	Web Hi Desktop Notification
 
-	Todo: 修改桌面消息窗口，支持HTML。
+	Todo: 
+	1. 修改桌面消息窗口，支持HTML。
+	2. 增加离线存储功能
 */
 //桌面通知
 function notify(icon, username, message) {	
