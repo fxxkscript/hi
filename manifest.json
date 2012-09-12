@@ -1,0 +1,22 @@
+{
+  "name": "Hi",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "The first extension that I made.",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "notifications"
+  ],
+  "web_accessible_resources": [
+    "http://im.baidu.com/html/promo/images/itieba.jpg"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://web.im.baidu.com/*"],
+      "run_at": "document_end",
+      "js": ["bg.js"]
+    }
+  ]
+}
