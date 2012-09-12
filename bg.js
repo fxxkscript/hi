@@ -7,15 +7,15 @@
 */
 //桌面通知
 function notify(icon, username, message) {	
-		var notification = webkitNotifications.createNotification(
-				icon,
-				username,
-				message
-		);
-		notification.show();
-		setTimeout(function() {
-			notification.close();
-		}, 5000);
+	var notification = webkitNotifications.createNotification(
+		icon,
+		username,
+		message
+	);
+	notification.show();
+	setTimeout(function() {
+		notification.close();
+	}, 5000);
 }
 //是否打开桌面消息推送功能，在页面顶部增加开启按钮
 function checkNotification() {
@@ -47,12 +47,11 @@ function notice() {
 	document.addEventListener("DOMNodeInserted", function(e) {
 		if(e.target.className == 'messageBlock') {
 			insertedNodes.push(e.target);
+			show();
 		}
 	}, false);
 	function show() {
-		clearTimeout(time);
 		len=insertedNodes.length;
-		console.log(insertedNodes);
 		if(len > pos) {
 			for(var i = pos; i < len; i++) {
 				var ele = insertedNodes[i];
@@ -66,9 +65,7 @@ function notice() {
 			insertedNodes = [];
 			pos = 0;
 		} 
-		time = setInterval(show, 1000);
 	}
-	var time = setInterval(show, 1000);
 }
 
 function init() {
