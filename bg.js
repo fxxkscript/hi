@@ -12,10 +12,16 @@ function notify(icon, username, message) {
 		username,
 		message
 	);
-	notification.show();
-	setTimeout(function() {
+	notification.onclick = function() {
 		notification.close();
-	}, 5000);
+	};
+	notification.ondisplay = function() {
+		setTimeout(function() {
+			notification.close();
+		}, 10000);
+	}
+
+	notification.show();
 }
 //是否打开桌面消息推送功能，在页面顶部增加开启按钮
 function checkNotification() {

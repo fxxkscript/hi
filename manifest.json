@@ -7,7 +7,8 @@
     "default_icon": "icon.png"
   },
   "permissions": [
-    "notifications"
+    "notifications",
+    "unlimitedStorage"
   ],
   "web_accessible_resources": [
     "http://im.baidu.com/html/promo/images/itieba.jpg"
